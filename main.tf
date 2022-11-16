@@ -19,6 +19,6 @@ module "s3_module" {
 
 resource "aws_s3_object" "object_upload" {
   key                    = "error.html"
-  bucket                 = aws_s3_bucket.examplebucket.id
+  bucket                 = module.s3_module.id
   source                 = "error.html"
 }
