@@ -12,7 +12,7 @@ resource "aws_dynamodb_table" "terraform-state" {
 
 module "s3_module" {
   source        = "./modules/s3"
-  bucket_name   = "relx_site"
+  bucket_name   = "relx-site"
   acl           = "public"
   environment   = "dev" 
 }
