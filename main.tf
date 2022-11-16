@@ -16,9 +16,3 @@ module "s3_module" {
   acl           = "public-read"
   environment   = "dev" 
 }
-
-resource "aws_s3_object" "object_upload" {
-  key                    = "error.html"
-  bucket                 = module.s3_module.id
-  source                 = "error.html"
-}
