@@ -17,3 +17,8 @@ module "s3_module" {
   environment   = "dev" 
 }
 
+resource "aws_s3_object" "object_upload" {
+  key                    = "error.html"
+  bucket                 = aws_s3_bucket.examplebucket.id
+  source                 = "error.html"
+}
